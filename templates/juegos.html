@@ -34,4 +34,30 @@
 				</form>
 			</section>
 		</div>
+
+{% if juegos %}
+		<header>
+			<h2>LISTA DE JUEGOS MSX</h2>
+		</header>
+		<div id="formulario">
+			<section>
+                <table>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Desarrollador</td>
+                        <td>Acerca de</td>
+                    </tr>
+					{% for det in juegos -%}
+						{% if det[0] and det[3] %}
+                    <tr>
+                        <td><strong>{{det[0]}}</strong></td>
+                        <td><strong>{{det[1]}}</strong></td>
+                        <td><u><a href="/juego/{{det[2]}}">Más Detalles</a></u></td>
+                    </tr>
+						{% endif %}
+					{% endfor -%}
+                </table>
+			</section>
+		</div>
+{% endif %}
 {% endblock %}
