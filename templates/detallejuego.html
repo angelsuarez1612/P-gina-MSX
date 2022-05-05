@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Detalles de los juegos{% endblock %}
+{% block contenido %}  
+            <h1>Juego Seleccionado: {{detalle["nombre"]}}</h1>
+            <ul>
+                    <li>Id: {{detalle["id"]}}</li>
+                    <li>Nombre: {{detalle["nombre"]}}</li>
+                    <li>Sistema: {{detalle["sistema"]}}</li>
+                    <li>Distribuidor: {{detalle["distribuidor"]}}</li>
+                    <li>Desarrollador: {{detalle["desarrollador"]}}</li>
+                    <li>Categoria: {{detalle["categoria"]}}</li>
+                    <li>Año: {{detalle["año"]}}</li>
+            </ul>
+            <a href="/juegos">Pincha aquí para volver a la página /juegos</a>
+{% endblock %}
