@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titulo %}Información de juegos{% endblock %}
+{% block contenido %}
+		<header>
+			<h2>JUEGOS MSX</h2>
+		</header>
+		<div  id="formulario">
+			<section>
+				<h3>Buscador de juegos:</h3>
+				<form method="post" action="/juegos">
+					<div class="row uniform 50%">
+						<div class="6u 12u$(xsmall)">
+							<input type="text" name="name" juego" value="{{cadena}}" />
+							<select name= "cat">
+								{% if categorias %}
+								<option>Todos</option>
+									{% for elem in categorias -%}
+										{% if elem == categoria %}
+											<option value= "{{elem}}" selected="selected">{{elem.title()}}</option>
+										{% else %}
+											<option value= "{{elem}}">{{elem.title()}}</option>
+										{% endif %}
+									{% endfor -%}
+								{% endif %}
+							</select>
+						<div class="12u$">
+							<ul class="actions">
+								<li><input type="submit" value="Buscar" class="special" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</section>
+		</div>
+{% endblock %}
