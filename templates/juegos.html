@@ -2,7 +2,7 @@
 {% block titulo %}Información de juegos{% endblock %}
 {% block contenido %}
 		<header>
-			<h2>JUEGOS MSX</h2>
+			<h1>JUEGOS MSX</h1>
 		</header>
 		<div  id="formulario">
 			<section>
@@ -10,7 +10,8 @@
 				<form method="post" action="/juegos">
 					<div class="row uniform 50%">
 						<div class="6u 12u$(xsmall)">
-							<input type="text" name="name" juego" value="{{cadena}}" />
+							<input type="text" name="name" juego value="{{cadena}}" />
+						</br>
 							<select name= "cat">
 								{% if categorias %}
 								<option>Todos</option>
@@ -23,6 +24,7 @@
 									{% endfor -%}
 								{% endif %}
 							</select>
+						</br>
 						<div class="12u$">
 							<ul class="actions">
 								<li><input type="submit" value="Buscar" class="special" /></li>
