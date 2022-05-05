@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>{% block titulo %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+                                <br />
+                                <ul class="actions special">
+                                    <li><a href="/" class="button large">Volver a inicio</a></li>
+                                </ul>
+                                <br />
+                                {%block contenido%}{%endblock%}
+							</section>
+	                </div>
+            </div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Ángel Suárez Pérez</li><li>PagWeb - HTML</li></ul>	
+					</div>
+	</body>
+</html>
